@@ -1,0 +1,5 @@
+spacy
+tensorflow==1.11.0
+benepar[cpu]
+cython
+numpy
