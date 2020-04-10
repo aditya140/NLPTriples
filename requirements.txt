@@ -1,5 +1,5 @@
 spacy
-tensorflow==1.11.0
+tensorflow==1.15.2
 benepar[cpu]
 cython
 numpy
