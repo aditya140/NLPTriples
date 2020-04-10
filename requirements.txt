@@ -3,3 +3,4 @@ tensorflow==1.15.2
 benepar[cpu]
 cython
 numpy
+regex
