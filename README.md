@@ -3,6 +3,7 @@ Extract NLP (RDF) Triples from a sentence
 
 # Overview
 A minimalistic library to extract triples from sentences. Implemented [paper](http://ailab.ijs.si/dunja/SiKDD2007/Papers/Rusu_Trippels.pdf) 
+
 Converted the [api](https://github.com/tdpetrou/RDF-Triple-API) created by [Ted Petrou](https://github.com/tdpetrou) to a simple library which can be be run directly.
 
 # Installation 
