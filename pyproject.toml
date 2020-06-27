@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "NLPTriples"
+version = "0.1.3"
+description = "A package to extract Triples in form of [predictate , object , subject]  form text "
+license = "MIT"
+readme = "README.md"
+authors = ["adityaparkhi <theaditya140@gmail.com>"]
+keywords = ["Poetry",
+            "NLP",
+            "Triples"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+numpy = "^1.18.2"
+cython = "^0.29.16"
+benepar = {extras = ["cpu"], version = "^0.1.2"}
+tensorflow = "1.15.2"
+spacy = "^2.2.4"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
