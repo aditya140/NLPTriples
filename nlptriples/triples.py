@@ -6,7 +6,7 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 from benepar.spacy_plugin import BeneparComponent
 warnings.catch_warnings()
-from parse_tree import parse_tree
+from nlptriples.parse_tree import parse_tree
 
 class RDF_triple(object):
 
@@ -47,7 +47,6 @@ class RDF_triple(object):
         self.find_subject(self.first_NP)
         self.find_predicate(self.first_VP)
         if (self.subject.word=="") and (self.first_NP is not None):
-            print(self.first_NP.__dir__())
             self.subject.word = self.first_NP.string
         self.predicate.word, self.predicate.depth, self.predicate.parent, self.predicate.grandparent = self.find_deepest_predicate()
         self.find_object()
@@ -189,8 +188,6 @@ class RDF_triple(object):
 
 # if __name__=="__main__":
 #     sent=" i live in raleigh"
-#     sent1="(S (NP (NP (DT The) (NN time)) (PP (IN for) (NP (NN action)))) (VP (VBZ is) (ADVP (RB now))))"
-#     sent2="A rare black squirrel has become a regular visitor to a suburban garden"
 #     rdf=RDF_triple()
 #     a=(rdf.extract(sent,parsed=False))
 #     print(a)
