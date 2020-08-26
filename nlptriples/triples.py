@@ -47,7 +47,8 @@ class RDF_triple(object):
         self.find_subject(self.first_NP)
         self.find_predicate(self.first_VP)
         if (self.subject.word=="") and (self.first_NP is not None):
-            self.subject.word = self.first_NP
+            print(self.first_NP.__dir__())
+            self.subject.word = self.first_NP.string
         self.predicate.word, self.predicate.depth, self.predicate.parent, self.predicate.grandparent = self.find_deepest_predicate()
         self.find_object()
         self.subject.attr, self.subject.attr_trees = self.get_attributes(self.subject.pos, self.subject.parent, self.subject.grandparent)
@@ -186,14 +187,13 @@ class RDF_triple(object):
         return self.attr_to_words(rdf_type_attr)
 
 
-if __name__=="__main__":
-    sent="A rare black squirrel has become a regular visitor to a suburban garden"
-    sent1="(S (NP (NP (DT The) (NN time)) (PP (IN for) (NP (NN action)))) (VP (VBZ is) (ADVP (RB now))))"
-    sent2="A rare black squirrel has become a regular visitor to a suburban garden"
-    rdf=RDF_triple()
-    a=(rdf.extract(sent,parsed=False))
-    a=rdf.extract(sent2,parsed=False)
-    print(a)
+# if __name__=="__main__":
+#     sent=" i live in raleigh"
+#     sent1="(S (NP (NP (DT The) (NN time)) (PP (IN for) (NP (NN action)))) (VP (VBZ is) (ADVP (RB now))))"
+#     sent2="A rare black squirrel has become a regular visitor to a suburban garden"
+#     rdf=RDF_triple()
+#     a=(rdf.extract(sent,parsed=False))
+#     print(a)
 
 
 
