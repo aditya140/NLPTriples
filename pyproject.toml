@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "NLPTriples"
-version = "0.1.3"
+version = "0.1.6"
 description = "A package to extract Triples in form of [predictate , object , subject]  form text "
 license = "MIT"
 readme = "README.md"
