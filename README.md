@@ -19,6 +19,6 @@ triple = rdf.extract(sent)
 print(triple)
 ```
 
-# Imeplemetation
+# Implementation
 1. Constituency Parse tree is create using Berkeley Neural Parser library. (the paper uses CoreNLP)
 2. The algorithm described in the [paper](http://ailab.ijs.si/dunja/SiKDD2007/Papers/Rusu_Trippels.pdf) is used to extract triples from parse trees.
